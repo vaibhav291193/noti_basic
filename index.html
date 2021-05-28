@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" type="text/css" href="css/notifications.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Design System - Notifications</title>
+</head>
+
+<body>
+    <div class="ds-container">
+        <div class="example-container">
+
+            <h2>With Close Button</h2>
+            <button onclick="openNotification('info', true)" aria-label="Show an info notification">Info</button>
+            <button onclick="openNotification('success', true)" aria-label="Show a success notification">
+            Succeess
+            </button>
+            <button onclick="openNotification('warning', true)" aria-label="Show a warning notification">
+            Warning
+            </button>
+            <button onclick="openNotification('error', true)" aria-label="Show an error notification">Error</button>
+
+
+            <h1>Notifications with Close Button</h1>
+            <div aria-live="polite" role="status">
+                <div id="infoClosebtn" class="alert info close">
+                    <span aria-label="Note:" class="icon info-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Information notifications provide non-essential, but helpful information. <a href="#" class="by-keyboard">View more</a></p>
+                        <p class="mobile">The item details have been deleted.</p>
+                    </div>
+                    <button aria-describedby="infoClosebtn"  aria-label="Close notification" class="closebtn" onclick="closeNotification('infoClosebtn')"></button>
+                </div>
+            </div>
+            <div aria-live="polite" role="status">
+                <div id="successClosebtn" class="alert success close">
+                    <span aria-label="Success:" class="icon success-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Success notifications indicate that a user has successfully completed an action.</p>
+                        <p class="mobile">Delivery preference is saved.</p>
+                    </div>
+                    <button aria-describedby="successClosebtn" aria-label="Close notification" class="closebtn" onclick="closeNotification('successClosebtn')"></button>
+                </div>
+            </div>
+            <div aria-live="polite" role="status">
+                <div id="warningClosebtn" class="alert warning close">
+                    <span aria-label="Caution:" class="icon warning-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Warning notifications provide essential information to prevent users from making an error.</p>
+                        <p class="mobile">The option to make changes is no longer available.</p>
+                    </div>
+                    <button aria-describedby="warningClosebtn" aria-label="Close notification" class="closebtn" onclick="closeNotification('warningClosebtn')"></button>
+                </div>
+            </div>
+            <div id="errorClosebtn" class="alert error" aria-live="assertive" role="alert">
+                <span aria-label="Error:" class="icon error-icon"></span>
+                <div class="text">
+                    <p>Error notifications tell users what’s required to successfully complete the action they are trying to complete.</p>
+                    <div class="inline-links">
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                    </div>
+                    <p>This is some new text. <a href="#" class="by-keyboard">View more</a></p>
+                    <div class="inline-links">
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                    </div>
+                    <p>This is some new text.</p>
+                </div>
+            </div>
+            
+
+
+            <h2>Without Close Button</h2>
+            <button onclick="openNotification('info', false)" aria-label="Show an info notification">Info</button>
+            <button onclick="openNotification('success', false)" aria-label="Show a success notification">
+            Succeess
+            </button>
+            <button onclick="openNotification('warning', false)" aria-label="Show a warning notification">
+            Warning
+            </button>
+            <button onclick="openNotification('error', false)" aria-label="Show an error notification">Error</button>
+
+
+            <h1>Notifications with out Close Button</h1>
+            <div aria-live="polite" role="status">
+                <div id="infobtn" class="alert info">
+                    <span aria-label="Note:" class="icon info-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Information notifications provide non-essential, but helpful information. <a href="#" class="by-keyboard">View more</a></p>
+                        <p class="mobile">The item details have been deleted.</p>
+                    </div>
+                </div>
+            </div>
+            <div aria-live="polite" role="status">
+                <div id="successbtn" class="alert success">
+                    <span aria-label="Success:" class="icon success-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Success notifications indicate that a user has successfully completed an action.</p>
+                        <p class="mobile">Delivery preference is saved.</p>
+                    </div>
+                </div>
+            </div>
+            <div aria-live="polite" role="status">
+                <div id="warningbtn" class="alert warning">
+                    <span aria-label="Caution:" class="icon warning-icon"></span>
+                    <div class="text">
+                        <p class="desktop">Warning notifications provide essential information to prevent users from making an error.</p>
+                        <p class="mobile">The option to make changes is no longer available.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="errorbtn" class="alert error" role="alert" aria-live="assertive">
+                <span aria-label="Error:" class="icon error-icon"></span>
+                <div class="text">
+                    <p>Error notifications tell users what’s required to successfully complete the action they are trying to complete.</p>
+                    <div class="inline-links">
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                    </div>
+                    <p>This is some new text. <a href="#" class="by-keyboard">View more</a></p>
+                    <div class="inline-links">
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                        <p><a href="#" class="by-keyboard">View more</a></p>
+                    </div>
+                    <p>This is some new text.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js/notifications.js"></script>
+</html>
